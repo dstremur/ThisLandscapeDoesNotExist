@@ -1,0 +1,6 @@
+# ignore all generated images
+Generated Images/
+
+# ignore all logs
+
+logs/
