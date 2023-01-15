@@ -4,3 +4,15 @@ Generated Images/
 # ignore all logs
 
 logs/
+
+#ignore Dataset
+
+Dataset/
+
+
+Best images/
+
+Best images 256x256/
+
+
+Generator03/
