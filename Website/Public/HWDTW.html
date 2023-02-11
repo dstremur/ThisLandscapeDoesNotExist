@@ -19,9 +19,50 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container-fluid vh-100 bg-dark">
-            <div class="row ">
-                <div class="col text-bg-dark mt-3 text-center">
-                    <h1>How does this Work</h1>
+
+            <nav class="navbar  navbar-dark navbar-collapse bg-dark d-flex">
+                <div class="container-fluid text-wrap d-flex">
+                  <a href="index.html" id="brand" class="navbar-brand text-bg-dark fw-bold d-flex align-items-center text-wrap fs-2" >This Landscape Does Not Exist</a>
+            
+                  <div class="collapse navbar-collapse" id="navbarHowDoesThisWork">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active text-bg-dark fw-bold text-wrap" aria-current="page" href="HWDTW.html">How Does This
+                          Work?</a>
+                      </li>
+                    </ul>
+            
+                  </div>
+            
+                </div>
+              </nav>
+
+
+
+            <div class="row text-bg-dark ">
+                <div class="col">
+                    Die Bilder auf der Website werden mithilfe eines GANs (General Adversarial Network) generiert. Ein GAN ist eine Art des generativen Modellings im Themenbereich Deep Learning. <br>
+                    Solche Netzwerke wurde erstmals von (Goodfellow, et. al) im Jahre 2014 beschrieben. Ein GAN besteht meistens aus den folgenden zwei Teilen.
+                    <br>
+
+                    <ul>
+                        <li>
+                            Einem Generator, der aus einem n-dimensionalen Vektor ein Bild generiert.
+                        </li>
+                        <li>
+                            Einem Discriminator, dessen Aufgabe es ist die echten und generierten Bilder zu unterscheiden.
+                        </li>
+                    </ul>
+
+                    <div class="row-4 justify-content-center d-flex">
+                        <img src="GAN2.png" alt="" class="img-fluid p-4 mx-auto" width="1024">
+                    </div>
+                    <div class="row">
+                        Dabei wird oft das Beispiel eines Geldfälschers verwendet. Dieser druckt Falschgeld, in unserem Fall die generierten Bilder, und versucht diese so echt wie möglich zu machen. Auf der anderen Seite steht die Polizei, in unserem Fall der Discriminator, die versucht das Falschgeld vom echten Geld zu trennen.
+                    </div>
+                    
+
+                    
                 </div>
             </div>
         </div>

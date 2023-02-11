@@ -1,6 +1,8 @@
 # ignore all generated images
 Generated Images/
 
+Generated Images128Batch/
+
 # ignore all logs
 
 logs/
