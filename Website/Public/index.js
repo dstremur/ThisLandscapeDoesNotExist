@@ -24,7 +24,7 @@ const randomVector = tf.randomNormal([1,100]);
     //img.print() 
     
     scalar = tf.scalar(127.5)
-    // remove rank of tensor
+    // Grad des Bildtensors auf 3 verkleinern
     img = img.squeeze();
 
 
@@ -58,6 +58,13 @@ const randomVector = tf.randomNormal([1,100]);
     //console.log(tf.memory());
 
     createDownloadButton();
+
+    
+    backend = tf.getBackend();
+
+
+    backenddiv = document.getElementById('backend');
+    backenddiv.innerText += 'Your are using: ' + backend;
 
     img.dispose();
     scalar.dispose();

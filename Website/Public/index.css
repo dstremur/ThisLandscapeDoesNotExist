@@ -1,4 +1,6 @@
-
+html, body {
+    height: 100%;
+}
 
 
 #brand{
@@ -14,3 +16,4 @@
     border-width: 3px;
     
 }
+

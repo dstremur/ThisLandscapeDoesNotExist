@@ -39,10 +39,10 @@
 
 
 
-            <div class="row text-bg-dark ">
+            <div class="row text-bg-dark p-3">
                 <div class="col">
-                    Die Bilder auf der Website werden mithilfe eines GANs (General Adversarial Network) generiert. Ein GAN ist eine Art des generativen Modellings im Themenbereich Deep Learning. <br>
-                    Solche Netzwerke wurde erstmals von (Goodfellow, et. al) im Jahre 2014 beschrieben. Ein GAN besteht meistens aus den folgenden zwei Teilen.
+                    Die Bilder auf der Website werden mithilfe eines GANs (General Adversarial Network) generiert. Ein GAN ist eine Art des generativen Modeling im Themenbereich Deep Learning. <br>
+                    Solche Netzwerke wurde erstmals von <a class="link-primary" href="https://arxiv.org/abs/1406.2661">(Goodfellow et. al)</a> im Jahre 2014 beschrieben. Ein GAN besteht meistens aus den folgenden zwei Teilen.
                     <br>
 
                     <ul>
@@ -50,24 +50,67 @@
                             Einem Generator, der aus einem n-dimensionalen Vektor ein Bild generiert.
                         </li>
                         <li>
-                            Einem Discriminator, dessen Aufgabe es ist die echten und generierten Bilder zu unterscheiden.
+                            Einem Discriminator, dessen Aufgabe es ist, die echten und generierten Bilder zu unterscheiden.
                         </li>
                     </ul>
 
-                    <div class="row-4 justify-content-center d-flex">
-                        <img src="GAN2.png" alt="" class="img-fluid p-4 mx-auto" width="1024">
-                    </div>
-                    <div class="row p-2">
-                        Dabei wird oft das Beispiel eines Geldfälschers verwendet. Dieser druckt Falschgeld, in unserem Fall die generierten Bilder, und versucht diese so echt wie möglich zu machen. Auf der anderen Seite steht die Polizei, in unserem Fall der Discriminator, die versucht das Falschgeld vom echten Geld zu trennen.
-                    </div>
-                    
-                    <div class="row-4 justify-content-center d-flex">
-                        <img src="test.gif" alt="" class="img-fluid p-4 mx-auto" width="256">
-                    </div>
-
-                    
                 </div>
             </div>
+                        <div class="row-4 justify-content-center d-flex">
+                            <figure class="figure">
+                            <img src="GAN2.png" class="figure-img img-fluid" alt="..."width="1024">
+                            <figcaption class="figure-caption">Schematische Darstellung eines GANs </figcaption>
+                            </figure>
+                        </div>
+                    
+                     
+                    
+                    
+                    <div class="row text-bg-dark p-3">
+                        <div class="col">
+                            Dabei wird oft das Beispiel eines Geldfälschers verwendet. Dieser druckt Falschgeld, in unserem Fall die generierten Bilder, und versucht diese so echt wie möglich zu machen. Auf der anderen Seite steht die Polizei, in unserem Fall der Diskriminator, die versucht das Falschgeld vom echten Geld zu trennen. Diese beiden Spieler haben gegenseitige Ziele und versuchen sich ständig zu überbieten. Bei einem GAN ist es sehr ähnlich. Der Diskriminator versucht immer besser, die echten von den generierten Bildern zu unterscheiden. Der Generator versucht immer bessere Bilder zu generieren und den Diskriminator damit zu überlisten.
+                        </div>
+                    </div>
+
+                    <div class="row text-bg-dark p-3">
+                        <div class="col">
+                            Der verwendeten Implementierung liegt ein DCGAN zu Grunde. DCGANs wurden von <a class="link-primary" href="https://arxiv.org/abs/1511.06434"> (Radford et. al) </a> 2015 eingeführt und stellten einen grossen Fortschritt im Bereich der Bildgeneration dar. Die Hauptneuerung dieser Netzwerke war die Einführung von konvolutionalen Schichten. Die untere Abbildung zeigt die Netzwerkarchitektur des Generator eines DCGANs.
+                        </div>
+                    </div>
+
+
+                    <div class="row-4 justify-content-center d-flex">
+                        <figure class="figure">
+                            <img src="DCGAN.png" class="figure-img img-fluid" alt="..."width="1024">
+                            <figcaption class="figure-caption">Netzwerkarchitektur eines DCGANS: <a class="link-primary" href="https://arxiv.org/abs/1511.06434">(Radford et. al)</a></figcaption>
+                        </figure>
+                        
+                    </div>
+
+                    <div class="row text-bg-dark p-3">
+                        <div class="col">
+                            Jedoch wurde die Bildgrösse von 64x6x auf 128x128 Pixel erhöht. Ebenfalls wurden zahlreiche Tips und Tricks aus der GAN Literatur verwendet um ein stabiles Traning zu ermöglichen (siehe dazu Arbeit). Dann wurde das GAN mit Tensorflow und auf einer RTX 3090 für 1200 Epochen traniert. Das Traning beanspruchte ca. 7 Stunden. Im unteren GIF werden die einzelnen Epochen dargestellt.
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="row text-bg-dark p-3"></div>
+
+                    <div class="row text-bg-dark p-3">
+                        <div class="row-4 justify-content-center d-flex">
+                            <img src="DCGAN.gif" alt="" class="img-fluid p-4 mx-auto" width="512">
+                        </div>
+                    </div>
+
+
+                    
+                    
+                    
+
+                    
+               
+            
         </div>
         <script src="" async defer></script>
     </body>
